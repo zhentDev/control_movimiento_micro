@@ -1,0 +1,7 @@
+C:\Users\Dell\Desktop\Pso Creator\Control_Movimiento\Control_velocidad_giro.cydsn\Control_velocidad_giro.cyprj|b3a565a5-c20e-408b-9f85-cbf99a0ab62b
+C:\Users\Dell\Desktop\Pso Creator\LCD_I2C_Component-master\LCD_I2C.cylib\LCD_I2C.cyprj|3254e19a-f6ac-48c1-8d7b-ce0aa67e9fe3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d4e47f0f-5f8f-4dd2-907a-87967ef31fbb
+C:\Users\Dell\OneDrive - Universidad Distrital Francisco José de Caldas\Documentos\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|365a6a1b-75e9-46b8-9730-5a3b275780fb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|90c6cd9d-caa5-4121-a79f-26afdf576d6a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|58480779-433b-4203-a61c-2aa285336873
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|baa481b3-6905-40b1-acfe-6f0dfc79efcc
