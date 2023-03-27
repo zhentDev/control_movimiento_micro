@@ -1,5 +1,5 @@
 # Control_velocidad_giro
-# 2023-03-19 21:39:19Z
+# 2023-03-27 08:59:07Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -12,57 +12,55 @@ set_io "Rx(0)" iocell 12 6
 set_io "Tx(0)" iocell 12 7
 set_io "SDA(0)" iocell 12 1
 set_io "SCL(0)" iocell 12 0
-set_io "LED(0)" iocell 2 1
-set_io "Encoder_A(0)" iocell 0 7
-set_io "outPWM(0)" iocell 12 4
-set_io "outTimer(0)" iocell 1 4
-set_io "left(0)" iocell 1 6
-set_io "rigth(0)" iocell 1 7
-set_location "Net_11" 2 2 1 3
-set_location "\UART_Serial:BUART:counter_load_not\" 2 3 0 1
-set_location "\UART_Serial:BUART:tx_status_0\" 3 2 1 3
-set_location "\UART_Serial:BUART:tx_status_2\" 3 2 0 0
-set_location "\UART_Serial:BUART:rx_counter_load\" 3 0 0 3
-set_location "\UART_Serial:BUART:rx_postpoll\" 2 1 0 3
-set_location "\UART_Serial:BUART:rx_status_4\" 2 1 1 2
-set_location "\UART_Serial:BUART:rx_status_5\" 3 1 1 3
-set_location "\PWM:PWMUDB:status_2\" 3 3 1 1
-set_location "Net_297" 3 2 0 2
-set_location "__ONE__" 1 1 1 0
-set_location "\UART_Serial:BUART:sTX:TxShifter:u0\" 3 2 2
-set_location "\UART_Serial:BUART:sTX:sCLOCK:TxBitClkGen\" 2 2 2
-set_location "\UART_Serial:BUART:sTX:TxSts\" 3 2 4
-set_location "\UART_Serial:BUART:sRX:RxShifter:u0\" 2 1 2
-set_location "\UART_Serial:BUART:sRX:RxBitCounter\" 2 0 7
-set_location "\UART_Serial:BUART:sRX:RxSts\" 3 1 4
-set_location "isr_Serial" interrupt -1 -1 1
+set_io "Trigger(0)" iocell 0 0
+set_io "Trigger_in(0)" iocell 0 7
+set_io "Out_1(0)" iocell 2 4
+set_io "Out_4(0)" iocell 2 7
+set_io "Out_3(0)" iocell 2 6
+set_io "Out_2(0)" iocell 2 5
+set_location "Net_11" 0 1 1 2
+set_location "\UART_Serial:BUART:counter_load_not\" 1 0 1 3
+set_location "\UART_Serial:BUART:tx_status_0\" 1 1 1 3
+set_location "\UART_Serial:BUART:tx_status_2\" 1 1 1 0
+set_location "\UART_Serial:BUART:rx_counter_load\" 0 1 0 1
+set_location "\UART_Serial:BUART:rx_postpoll\" 0 1 1 3
+set_location "\UART_Serial:BUART:rx_status_4\" 0 1 0 0
+set_location "\UART_Serial:BUART:rx_status_5\" 0 2 1 3
+set_location "\Counter:CounterUDB:status_0\" 2 4 1 3
+set_location "\Counter:CounterUDB:status_2\" 3 4 1 0
+set_location "\Counter:CounterUDB:count_enable\" 3 4 1 2
+set_location "__ONE__" 2 0 1 1
+set_location "\UART_Serial:BUART:sTX:TxShifter:u0\" 1 2 2
+set_location "\UART_Serial:BUART:sTX:sCLOCK:TxBitClkGen\" 1 0 2
+set_location "\UART_Serial:BUART:sTX:TxSts\" 1 1 4
+set_location "\UART_Serial:BUART:sRX:RxShifter:u0\" 0 1 2
+set_location "\UART_Serial:BUART:sRX:RxBitCounter\" 0 0 7
+set_location "\UART_Serial:BUART:sRX:RxSts\" 0 2 4
+set_location "isr_Serial" interrupt -1 -1 0
 set_location "\I2C:I2C_IRQ\" interrupt -1 -1 15
 set_location "\I2C:I2C_FF\" i2ccell -1 -1 0
-set_location "isr_Encoder_A" interrupt -1 -1 0
 set_location "\Timer:TimerHW\" timercell -1 -1 0
-set_location "\PWM:PWMUDB:genblk1:ctrlreg\" 2 3 6
-set_location "\PWM:PWMUDB:genblk8:stsreg\" 3 3 4
-set_location "\PWM:PWMUDB:sP16:pwmdp:u0\" 2 3 2
-set_location "\PWM:PWMUDB:sP16:pwmdp:u1\" 3 3 2
-set_location "isr_Timer" interrupt -1 -1 2
-set_location "\UART_Serial:BUART:txn\" 2 2 0 0
-set_location "\UART_Serial:BUART:tx_state_1\" 2 3 1 1
-set_location "\UART_Serial:BUART:tx_state_0\" 3 3 1 0
-set_location "\UART_Serial:BUART:tx_state_2\" 2 2 1 0
-set_location "\UART_Serial:BUART:tx_bitclk\" 3 3 1 2
-set_location "\UART_Serial:BUART:tx_ctrl_mark_last\" 2 1 0 1
-set_location "\UART_Serial:BUART:rx_state_0\" 2 0 0 0
-set_location "\UART_Serial:BUART:rx_load_fifo\" 2 1 1 3
-set_location "\UART_Serial:BUART:rx_state_3\" 2 0 1 3
-set_location "\UART_Serial:BUART:rx_state_2\" 2 1 0 0
-set_location "\UART_Serial:BUART:rx_bitclk_enable\" 2 0 1 0
-set_location "\UART_Serial:BUART:rx_state_stop1_reg\" 3 1 1 0
-set_location "\UART_Serial:BUART:pollcount_1\" 2 2 0 2
-set_location "\UART_Serial:BUART:pollcount_0\" 3 0 1 0
-set_location "\UART_Serial:BUART:rx_status_3\" 3 0 1 2
-set_location "\UART_Serial:BUART:rx_last\" 2 1 0 2
-set_location "cy_tff_1" 3 2 0 1
-set_location "\PWM:PWMUDB:runmode_enable\" 2 3 0 0
-set_location "\PWM:PWMUDB:prevCompare1\" 3 3 0 2
-set_location "\PWM:PWMUDB:status_0\" 3 3 0 0
-set_location "Net_385" 2 3 0 2
+set_location "isr_Timer" interrupt -1 -1 1
+set_location "\Counter:CounterUDB:sCTRLReg:ctrlreg\" 3 4 6
+set_location "\Counter:CounterUDB:sSTSReg:stsreg\" 2 4 4
+set_location "\Counter:CounterUDB:sC16:counterdp:u0\" 3 4 2
+set_location "\Counter:CounterUDB:sC16:counterdp:u1\" 2 4 2
+set_location "\UART_Serial:BUART:txn\" 1 2 1 0
+set_location "\UART_Serial:BUART:tx_state_1\" 1 1 0 3
+set_location "\UART_Serial:BUART:tx_state_0\" 1 2 0 2
+set_location "\UART_Serial:BUART:tx_state_2\" 1 0 0 0
+set_location "\UART_Serial:BUART:tx_bitclk\" 1 2 1 2
+set_location "\UART_Serial:BUART:tx_ctrl_mark_last\" 0 0 0 3
+set_location "\UART_Serial:BUART:rx_state_0\" 0 0 1 0
+set_location "\UART_Serial:BUART:rx_load_fifo\" 0 2 0 1
+set_location "\UART_Serial:BUART:rx_state_3\" 0 2 1 0
+set_location "\UART_Serial:BUART:rx_state_2\" 0 0 1 2
+set_location "\UART_Serial:BUART:rx_bitclk_enable\" 0 1 0 3
+set_location "\UART_Serial:BUART:rx_state_stop1_reg\" 0 2 0 3
+set_location "\UART_Serial:BUART:pollcount_1\" 0 1 1 0
+set_location "\UART_Serial:BUART:pollcount_0\" 0 1 1 1
+set_location "\UART_Serial:BUART:rx_status_3\" 0 0 0 0
+set_location "\UART_Serial:BUART:rx_last\" 0 0 1 1
+set_location "\Counter:CounterUDB:overflow_reg_i\" 3 4 0 2
+set_location "\Counter:CounterUDB:prevCompare\" 2 4 1 0
+set_location "\Counter:CounterUDB:count_stored_i\" 3 4 0 1
