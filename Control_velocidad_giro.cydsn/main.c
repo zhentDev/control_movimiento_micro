@@ -19,7 +19,6 @@ char RPM_String[16] =      "VEL : 0      rpm";
 
 // Declaración de las variables necesarias para leer las interrupciones
 float RPM;
-
 char RPM_reading[6];
 float PWM;
 float PWM_final;
@@ -67,13 +66,13 @@ CY_ISR(isrSerial) {
             if (bufferReceive[3] == 'i') {
                 printLCD(0, 0, "Giro: Izquierda ");
                 aceleration = 0;
-                //time = 0;
+                time = 0;
                 RPM = 0;
             }
             if (bufferReceive[3] == 'd') {
                 printLCD(0, 0, "Giro: Derecha   ");
                 aceleration = 0;
-                //time = 0;
+                time = 0;
                 RPM = 0;
             }
             if (bufferReceive[3] == 'p') {
@@ -89,9 +88,9 @@ CY_ISR(isrSerial) {
 CY_ISR(isrTimer) {
     Counter_Stop();
     RPM = (60*Counter_ReadCounter()/50);
-    sprintf(RPM_reading, "%.0f   ", RPM);
+    sprintf(RPM_reading, "%.0f  ", RPM);
     printLCD(6, 1, RPM_reading);
-    if (RPM_receive != 0) {
+    if (RPM_receive != 0 && time != 0) {
         sprintf(bufferToSend_PWM, "Envia Vel: %.0f|", RPM);
         UART_Serial_PutString(bufferToSend_PWM);
     }
@@ -105,8 +104,7 @@ CY_ISR(isrTimer) {
         //sprintf(string_function_delay, "%.0f   ", function_delay);
         //printLCD(6, 0, string_function_delay);
         time = time + 1;
-    }
-    if (aceleration >= 5 && bufferReceive[3] == 'p') {
+    }else if (aceleration >= 5 && bufferReceive[3] == 'p') {
         aceleration = aceleration - (RPM_receive/time_receive);
         function_delay = pow(aceleration, -0.94);
         function_delay = 226.8 * function_delay;
@@ -114,12 +112,14 @@ CY_ISR(isrTimer) {
         //printLCD(6, 0, string_function_delay);
         time = time + 1;
     }
+    else if (time != 0) {
+        time++;
+    }
     
-    if (RPM_receive != 0) {
+    if (RPM_receive != 0 && time != 0) {
         sprintf(time_reading, "Envia Time: %i\n\r", time);
         UART_Serial_PutString(time_reading);
     }
-    //printLCD(0, 0, time_reading);
 }
 
 int main(void) {

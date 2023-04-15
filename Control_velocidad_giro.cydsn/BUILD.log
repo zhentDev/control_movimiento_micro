@@ -1,4 +1,4 @@
---------------- Build Started: 03/27/2023 04:34:10 Project: Control_velocidad_giro, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 04/10/2023 22:24:42 Project: Control_velocidad_giro, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Control_velocidad_giro.a .\CortexM3\ARM_GCC_541\Debug\isr_Serial.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\UART_Serial.o .\CortexM3\ARM_GCC_541\Debug\UART_Serial_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_Serial_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_Serial_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_Serial_IntClock.o .\CortexM3\ARM_GCC_541\Debug\SDA.o .\CortexM3\ARM_GCC_541\Debug\SCL.o .\CortexM3\ARM_GCC_541\Debug\I2C.o .\CortexM3\ARM_GCC_541\Debug\I2C_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_MASTER.o .\CortexM3\ARM_GCC_541\Debug\LCD_I2C_LL_I2C.o .\CortexM3\ARM_GCC_541\Debug\LCD_I2C_FUNCS.o .\CortexM3\ARM_GCC_541\Debug\Counter.o .\CortexM3\ARM_GCC_541\Debug\Counter_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer.o .\CortexM3\ARM_GCC_541\Debug\Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\timer_clock.o .\CortexM3\ARM_GCC_541\Debug\isr_Timer.o .\CortexM3\ARM_GCC_541\Debug\Out_1.o .\CortexM3\ARM_GCC_541\Debug\Out_4.o .\CortexM3\ARM_GCC_541\Debug\Out_3.o .\CortexM3\ARM_GCC_541\Debug\Out_2.o .\CortexM3\ARM_GCC_541\Debug\timer_clock_1.o .\CortexM3\ARM_GCC_541\Debug\Trigger.o .\CortexM3\ARM_GCC_541\Debug\Trigger_in.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
@@ -9,6 +9,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\Dell\Desktop\Movimientos\Control_Movimiento\Control_velocidad_giro.cydsn\CortexM3\ARM_GCC_541\Debug\Control_velocidad_giro.elf
-Flash used: 23388 of 262144 bytes (8.9 %).
+Flash used: 23420 of 262144 bytes (8.9 %).
 SRAM used: 3249 of 65536 bytes (5.0 %). Stack: 2048 bytes. Heap: 512 bytes.
---------------- Build Succeeded: 03/27/2023 04:34:13 ---------------
+--------------- Build Succeeded: 04/10/2023 22:24:52 ---------------
